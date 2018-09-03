@@ -4,12 +4,12 @@ Demonstrates using (calling) FUNCTIONS and using (calling) METHODS:
   -- how they differ.
 
 Authors: David Mutchler, Dave Fisher, Vibha Alangar, Amanda Stouder,
-         their colleagues and Vibha Alangar.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Myon McGee. 
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ###############################################################################
 #
-# TODO: 2.
+# DONE: 2.
 #   READ this comment, ASKING QUESTIONS as needed to understand it.
 #
 # Part 1:  CONSTRUCTING objects, applying ** METHODS ** to them:
@@ -81,13 +81,17 @@ def main():
     turtle = rg.SimpleTurtle('square')
     draw_many_squares(turtle, 3, 75, 15)
 
-    turtle3()
+    turtle3('green', 5)
 
     ###########################################################################
     # When the TODOs ask you to test YOUR code, put YOUR tests below this:
     ###########################################################################
+    jump_and_move_turtle(100,90,100,90)
+    try_methods()
+    try_functions()
 
-    window.close_on_mouse_click()  # Your code must be ABOVE this statement
+    window.close_on_mouse_click()
+    # Your code must be ABOVE this statement
 
 
 def jump_and_move_turtle(x1, y1, x2, y2):
@@ -180,8 +184,15 @@ def try_methods():
       -- forward    50 units
       -- backward  100 units
     """
+    john = rg.SimpleTurtle()
+    john.pen = rg.Pen('brown', 5)
+
+    john.forward(150)
+    john.left(90)
+    john.forward(50)
+    john.backward(100)
     ###########################################################################
-    # TODO: 3. Implement and test this function, per its doc-string above.
+    # DONE: 3. Implement and test this function, per its doc-string above.
     #     (To test it, put a statement in   main   that calls this function.)
     ###########################################################################
 
@@ -194,8 +205,31 @@ def try_functions():
      -- One jumps to (100, 200), then moves (while drawing) to (0, 0)
      -- One jumps to (-50, 50), then moves (while drawing) to (100, 100)
     """
+    jim = rg.SimpleTurtle('turtle')
+    tim = rg.SimpleTurtle('arrow')
+    tom = rg.SimpleTurtle('classic')
+
+    jim.pen = rg.Pen('brown', 10)
+    tim.pen = rg.Pen('green', 10)
+    tom.pen = rg.Pen('blue', 10)
+
+    jim.pen_up()
+    tim.pen_up()
+    tom.pen_up()
+
+    jim.go_to(rg.Point(200,100))
+    tim.go_to(rg.Point(100, 200))
+    tom.go_to(rg.Point(-50,50))
+
+    jim.pen_down()
+    tim.pen_down()
+    tom.pen_down()
+
+    jim.go_to(rg.Point(300, 30))
+    tim.go_to(rg.Point(0, 0))
+    tom.go_to(rg.Point(100, 100))
     ###########################################################################
-    # TODO: 4. Implement and test this function, per its doc-string above.
+    # DONE: 4. Implement and test this function, per its doc-string above.
     #    (To test it, put a statement in   main   that calls this function.)
     #
     #    NOTE: This function requires
