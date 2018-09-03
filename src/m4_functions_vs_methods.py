@@ -89,6 +89,7 @@ def main():
     jump_and_move_turtle(100,90,100,90)
     try_methods()
     try_functions()
+    try_methods_and_functions()
 
     window.close_on_mouse_click()
     # Your code must be ABOVE this statement
@@ -258,8 +259,19 @@ def try_methods_and_functions():
         yim.draw_square(50)
         yim.left(15)
 
-        yim.speed = 100
-        yim.pen = rg.Pen('red', 35)
+    yim.speed = 100
+    yim.pen = rg.Pen('red', 35)
+
+    for r in range(8):
+        yim.draw_square(300)
+        yim.left(60)
+
+    yim.pen = rg.Pen('black', 3)
+
+    yim.backward(200)
+    yim.draw_circle(30)
+    yim.draw_square(50)
+
     # IMPORTANT: Read the NOTE below before you try to solve this TO-DO!
     """
     Constructs a SimpleTurtle and sets its   pen  to a new rg.Pen
@@ -293,7 +305,7 @@ def try_methods_and_functions():
       8. Draw a SQUARE whose sides are each of length 50.
     """
     ###########################################################################
-    # TODO: 5. Implement and test this function, per its doc-string above.
+    # DONE: 5. Implement and test this function, per its doc-string above.
     #    (To test it, put a statement in   main   that calls this function.)
     #
     #   NOTE: This function should ** CALL ** the
