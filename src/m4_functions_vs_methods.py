@@ -241,6 +241,25 @@ def try_functions():
 
 
 def try_methods_and_functions():
+
+    yim = rg.SimpleTurtle('turtle')
+    yim.pen = rg.Pen('blue', 5)
+
+    yim.speed = 1
+
+    yim.draw_square(100)
+    yim.left(30)
+    yim.draw_square(100)
+
+    yim.speed = 5
+    yim.pen = rg.Pen('red', 5)
+
+    for i in range(10):
+        yim.draw_square(50)
+        yim.left(15)
+
+        yim.speed = 100
+        yim.pen = rg.Pen('red', 35)
     # IMPORTANT: Read the NOTE below before you try to solve this TO-DO!
     """
     Constructs a SimpleTurtle and sets its   pen  to a new rg.Pen
